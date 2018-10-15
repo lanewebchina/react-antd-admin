@@ -20,9 +20,10 @@ const composeEnhancers =
   process.env.NODE_ENV !== 'production' &&
   typeof window === 'object' &&
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
       // Specify here name, actionsBlacklist, actionsCreators and other options
-    }) : compose;
+  }) : compose;
+  
 const enhancer = composeEnhancers(
   middleware,
   // other store enhancers if any
@@ -33,7 +34,7 @@ const enhancer = composeEnhancers(
 // 就是把每个组件自己的初始状态组合起来, 注意key的名字和组件名一致
 const initState = {
   Sidebar: Sidebar.initState,
-  Login: Login.initState,
+  Login: Login.initState
 };
 
 
@@ -41,7 +42,7 @@ const initState = {
 // 每个组件自己的reducer负责维护自己的状态, 注意key的名字和组件名一致
 const reducers = {
   Sidebar: Sidebar.reducer,
-  Login: Login.reducer,
+  Login: Login.reducer
 };
 
 

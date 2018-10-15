@@ -42,6 +42,8 @@ class Header extends React.PureComponent {
 
     // header右侧必须是用户菜单
     let userMenuItems = null;
+    
+    console.log('headerMenu=',headerMenu);
 
     const menu = headerMenu.map((level1) => {
       paths.push(level1.key);
@@ -121,7 +123,7 @@ class Header extends React.PureComponent {
         {/*定义header中的菜单, 从右向左依次是注销/用户菜单/其他自定义菜单*/}
         <Menu className="header-menu" mode="horizontal">
           {this.userMenu}
-          {this.menu}
+          {/* {this.menu} */}
         </Menu>
       </div>
     );

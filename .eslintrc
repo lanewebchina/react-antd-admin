@@ -1,20 +1,108 @@
 {
-  "extends": "eslint-config-airbnb",
-  "parser": "babel-eslint",
-  "rules": {
-    "spaced-comment": [0],
-    "no-unused-vars": [0],
-    "no-empty": [0],
-    "react/wrap-multilines": [0],
-    "react/no-multi-comp": [0],
-    "no-constant-condition": [0],
-    "react/jsx-no-bind": [0],
-    "react/prop-types": [0],
-    "arrow-body-style": [0],
-    "react/prefer-stateless-function": [0],
-    "semi": [0]
-  },
-  "ecmaFeatures": {
-    "experimentalObjectRestSpread": true
-  }
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "plugins": [
+        "react"
+    ],
+    "globals": {
+        "RongIMLib": true,
+        "RongIMClient": true,
+        "React": true,
+        "moment": true
+    },
+    "rules": {
+        "camelcase": [
+            0
+        ],
+        "no-plusplus": [
+            0
+        ],
+        "prefer-template": [
+            0
+        ],
+        "react/no-danger": [
+            0
+        ],
+        "arrow-body-style": [
+            0
+        ],
+        "react/prop-types": [
+            0
+        ],
+        "no-return-assign": [
+            0
+        ],
+        "no-restricted-syntax": [
+            0
+        ],
+        "no-underscore-dangle": [
+            0
+        ],
+        "no-extra-boolean-cast": [
+            0
+        ],
+        "array-callback-return": [
+            0
+        ],
+        "react/react-in-jsx-scope": [
+            0
+        ],
+        "jsx-a11y/media-has-caption": [
+            0
+        ],
+        "max-len": [
+            "error",
+            180
+        ],
+        "jsx-a11y/href-no-hash": "off",
+        "jsx-a11y/anchor-is-valid": [
+            "warn",
+            {
+                "aspects": [
+                    "invalidHref"
+                ]
+            }
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "arrow-parens": [
+            2,
+            "as-needed",
+            {
+                "requireForBlockBody": true
+            }
+        ],
+        "indent": [
+            "error",
+            2
+        ],
+        "no-console": [
+            0
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
 }
